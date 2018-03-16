@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Utils</string>
+    <string name="touch_to_speak">按住 说话</string>
+    <string name="send">发送</string>
+    
+    <string name="album">相册</string>
+    <string name="photo">拍摄</string>
+    <string name="collect">收藏</string>
+    <string name="contact">名片</string>
+    <string name="transfer">转账</string>
+    <string name="file">文件</string>
+</resources>

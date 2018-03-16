@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--defined by spoom-->
+    <color name="transparent">#00000000</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="light_green">#FF2EBE29</color>
+    <color name="light_grey">#ffbebebe</color>
+    <color name="light_red">#fcf6ebe6</color>
+
+    <color name="header_gray">#393A3F</color>
+    <color name="main_bottom_bg">#fcfcfc</color>
+    <color name="main_bottom_split">#D4D4D4</color>
+    <color name="colorPrimaryDark">#292929</color>
+    <!--font color begin-->
+    <color name="font_tip">#353535</color>
+    <!--font color end-->
+    <color name="btn_green">#1da114</color>
+    <color name="btn_green_pressed">#148f13</color>
+    <color name="btn_green_disabled">#2f712f</color>
+    <color name="btn_green_border">#1b9113</color>
+
+    <color name="btn_gray">#f6f6f6</color>
+    <color name="btn_gray_pressed">#d4d4d4</color>
+    <color name="btn_gray_border">#d6d6d6</color>
+    <color name="btn_gray_border_pressed">#b7b7b7</color>
+
+    <color name="title_bar_bk">#393a3e</color>
+
+    <color name="bk_chat_input">#f4f4f4</color>
+    <!--defined by spoom end-->
+</resources>

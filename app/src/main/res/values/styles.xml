@@ -1,0 +1,60 @@
+<resources>
+    <style name="AppTheme" parent="android:Theme.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="horizontal_slide" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/AnimFadeInOut</item>
+    </style>
+
+    <style name="Picker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="chat_time_style">
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:textColor">@color/chat_time</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/bg_chat_time</item>
+    </style>
+
+    <style name="AppTheme.Button.Chat" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">@style/textAppearance</item>
+        <item name="android:minWidth">50dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+    </style>
+
+    <style name="textAppearance">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AnimScale">
+        <item name="android:windowEnterAnimation">@anim/scale_in</item>
+    </style>
+
+    <style name="AnimFadeInOut" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_to_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_to_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_from_left</item>
+    </style>
+
+    <style name="animTranslate">
+        <item name="android:windowEnterAnimation">@anim/translate_in</item>
+    </style>
+
+</resources>

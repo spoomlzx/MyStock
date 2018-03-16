@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--defined by spoom-->
+    <color name="transparent">#00000000</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="light_green">#FF2EBE29</color>
+    <color name="light_grey">#ffbebebe</color>
+    <color name="light_red">#fcf6ebe6</color>
+
+    <!--font color begin-->
+    <color name="font_tip">#353535</color>
+    <color name="chat_time">#fdfdfd</color>
+    <!--font color end-->
+
+    <color name="bk_gray">#FFEBEBEB</color>
+    <color name="divider_gray">#dbdbdb</color>
+    <color name="divider_line">#c6c6c6</color>
+    <color name="phone_blue">#3053ac</color>
+    <color name="clickable_gray">#d4d4d4</color>
+
+    <color name="header_gray">#393A3F</color>
+    <color name="main_bottom_bg">#fcfcfc</color>
+    <color name="main_bottom_split">#D4D4D4</color>
+    <color name="colorPrimaryDark">#292929</color>
+    <!--defined by spoom end-->
+</resources>

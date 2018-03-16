@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.spoom.xiaohei">
+    <!-- 权限声明 -->
+    <!-- 访问网络状态-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <permission
+            android:name="com.spoom.xiaohei.permission.RECEIVE_MSG"
+            android:protectionLevel="signature"/>
+    <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <uses-permission android:name="com.spoom.xiaohei.permission.RECEIVE_MSG"/>
+
+    <application
+            android:name=".XiaoheiApp"
+            android:icon="@drawable/icon"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:hardwareAccelerated="true">
+
+        <meta-data
+                android:name="com.netease.nim.appKey"
+                android:value="1eedd376a581bf8f2e481193a82bcff3"/>
+        <!-- 云信后台服务，请使用独立进程。 -->
+        <service
+                android:name="com.netease.nimlib.service.NimService"
+                android:process=":core"/>
+
+        <!-- 云信后台辅助服务 -->
+        <service
+                android:name="com.netease.nimlib.service.NimService$Aux"
+                android:process=":core"/>
+
+        <!-- 云信后台辅助服务 -->
+        <service
+                android:name="com.netease.nimlib.job.NIMJobService"
+                android:exported="true"
+                android:permission="android.permission.BIND_JOB_SERVICE"
+                android:process=":core"/>
+
+        <!-- 云信监视系统启动和网络变化的广播接收器，保持和 NimService 同一进程 -->
+        <receiver android:name="com.netease.nimlib.service.NimReceiver"
+                  android:process=":core"
+                  android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 云信进程间通信 Receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver"/>
+
+        <!-- 云信进程间通信service -->
+        <service android:name="com.netease.nimlib.service.ResponseService"/>
+
+        <!-- 云信进程间通信provider -->
+        <!-- android:authorities="{包名}.ipc.provider", 请将com.netease.nim.demo替换为自己的包名 -->
+        <provider
+                android:name="com.netease.nimlib.ipc.NIMContentProvider"
+                android:authorities="com.spoom.xiaohei.ipc.provider"
+                android:exported="false"
+                android:process=":core"/>
+
+        <activity android:name=".activity.SplashActivity"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.login.LoginActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/horizontal_slide"
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.main.MainActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/horizontal_slide"
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                  android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.chat.ChatActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/horizontal_slide"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--展示大图-->
+        <activity android:name=".activity.imageShow.ImageShowActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/Picker"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name="com.spoom.base.picker.ui.PickerActivity"
+                  android:theme="@style/Picker"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.spoom.base.picker.ui.PreviewActivity"
+                  android:theme="@style/Picker"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.main.detail.UserDetailActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/horizontal_slide"
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.moment.MomentActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/horizontal_slide"
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                  android:screenOrientation="portrait"/>
+
+        <!--测试video-->
+        <activity android:name=".activity.chat.video.VideoPlayActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/horizontal_slide"
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.chat.video.VideoViewActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/horizontal_slide"
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                  android:screenOrientation="portrait"/>
+
+    </application>
+</manifest>

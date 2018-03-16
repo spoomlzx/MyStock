@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:im="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bk_gray"
+              android:orientation="vertical">
+    <com.spoom.base.widget.ImagePanel
+            android:id="@+id/ip_moment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_size"
+            android:layout_marginTop="@dimen/space_20"
+            android:clickable="true"
+            im:image="@drawable/icon_moment"
+            im:text="@string/moment"
+            im:bottomDivider="false"/>
+
+    <com.spoom.base.widget.ImagePanel
+            android:id="@+id/ip_scan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_size"
+            android:layout_marginTop="@dimen/space_20"
+            android:clickable="true"
+            im:image="@drawable/icon_scan"
+            im:text="@string/scan"
+            im:bottomDivider="false"/>
+
+    <com.spoom.base.widget.ImagePanel
+            android:id="@+id/ip_search_for"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_size"
+            android:layout_marginTop="@dimen/space_20"
+            android:clickable="true"
+            im:image="@drawable/icon_search_for"
+            im:text="@string/search_for"/>
+    <com.spoom.base.widget.ImagePanel
+            android:id="@+id/ip_expression"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_size"
+            android:clickable="true"
+            im:image="@drawable/icon_expression"
+            im:text="@string/expression"
+            im:bottomDivider="false"/>
+
+    <com.spoom.base.widget.ImagePanel
+            android:id="@+id/ip_buy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_size"
+            android:layout_marginTop="@dimen/space_20"
+            android:clickable="true"
+            im:image="@drawable/icon_buy"
+            im:text="@string/buy"/>
+    <com.spoom.base.widget.ImagePanel
+            android:id="@+id/ip_game"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_size"
+            android:clickable="true"
+            im:image="@drawable/icon_game"
+            im:text="@string/game"
+            im:bottomDivider="false"/>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<resources>
+
+    <dimen name="height_top_bar">48dp</dimen>
+
+    <dimen name="chat_input_size">48dp</dimen>
+
+    <!--space size-->
+    <dimen name="space_15">15dp</dimen>
+    <dimen name="space_20">20dp</dimen>
+    <dimen name="space_10">10dp</dimen>
+
+    <!--contact-->
+    <dimen name="actionBarSize">48dp</dimen>
+    <dimen name="avatar_size">36dp</dimen>
+    <dimen name="contact_avatar_size">64dp</dimen>
+    <dimen name="icon_small">20dp</dimen>
+    <dimen name="icon_24">24dp</dimen>
+    <dimen name="icon_36">36dp</dimen>
+    <dimen name="list_item_size">52dp</dimen>
+    <!--chat-->
+    <dimen name="chat_avatar_size">40dp</dimen>
+    <dimen name="conversation_avatar_size">48dp</dimen>
+    <dimen name="chat_row_space">12dp</dimen>
+    <dimen name="link_icon_size">45dp</dimen>
+
+    <!--font size-->
+    <dimen name="font_size_small">10sp</dimen>
+    <dimen name="font_size_little">12sp</dimen>
+    <dimen name="font_size_light">14sp</dimen>
+    <dimen name="font_size_normal">16sp</dimen>
+    <dimen name="font_size_large">18sp</dimen>
+
+    <dimen name="divider_line">0.4dp</dimen>
+</resources>

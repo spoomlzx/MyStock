@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImagePanel">
+        <attr name="image" format="reference"/>
+        <attr name="imageSize" format="dimension"/>
+        <attr name="text" format="string"/>
+        <attr name="bottomDivider" format="boolean"/>
+        <attr name="unreadNumber" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar">
+        <!--Reference or color to change the background of the titleBar-->
+        <attr name="backColor" format="reference|color"/>
+        <!--this enum represent the left button mode-->
+        <attr name="leftButton" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="back" value="1"/>
+            <enum name="close" value="2"/>
+        </attr>
+        <!--the title of the bar-->
+        <attr name="title" format="string"/>
+        <!--set whether the search button is shown-->
+        <attr name="showSearch" format="boolean"/>
+        <!--set the image icon of the right button, if this attr is set, the rightTextButton will be ignored-->
+        <attr name="rightButton" format="reference"/>
+        <!--set the name of the right text button-->
+        <attr name="rightTextButton" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ChatExtendMenu">
+        <attr name="rowNum" format="integer"/>
+    </declare-styleable>
+</resources>
